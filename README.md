@@ -1,1 +1,2 @@
-# Next JS -  Clean Youtube Courses
+# Youtube-nextjs-course-plataform
+Studies of React, NextJs and Tailwind
