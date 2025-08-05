@@ -38,7 +38,7 @@ export default function Header() {
                         <li className="hidden sm:flex">
                             <Link href='https://www.skilledseducer.com/threads/going-out-alone.12004/'>My connections</Link>
                         </li>
-                        <h1 className="sm:hidden">
+                        <h1 className="sm:hidden font-bold">
                             {title}
                         </h1>
                     </ul>

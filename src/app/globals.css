@@ -14,6 +14,7 @@ html.light {
 body {
   background-color: var(--background);
   color: var(--foreground);
+  {/*overflow:overlay (serve para não aparece os scrolls*/}
 }
 
 a {
