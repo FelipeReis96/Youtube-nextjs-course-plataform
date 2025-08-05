@@ -12,7 +12,7 @@ export default function ToggleTheme() {
 
     return (
         <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-        className="p-2 rounded w-[200px] flex items-center gap-4"
+        className="sm:p-2  rounded  flex items-center gap-4"
         >
             {theme === 'dark' ? <FiMoon />  : <FiSun /> }
             {theme === 'dark' ? ' Light Mode' : ' Dark Mode'}

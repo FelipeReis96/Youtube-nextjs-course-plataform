@@ -16,6 +16,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Clean YT Courses ",
   description: "Watch YouTube courses without distractions",
+  icons: {
+    icon: "/favicon.ico",
+  }
 };
 
 export default function RootLayout({
