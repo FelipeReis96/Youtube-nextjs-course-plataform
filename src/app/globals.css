@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #171717;
+  --background: #000000;
   --foreground: #ffffff;
   --color-header: #2F4653;
+  --card-color: #171717;
 }
 
 html.light {
