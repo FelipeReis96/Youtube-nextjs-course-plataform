@@ -2,7 +2,7 @@ import Section from "@/components/section/section";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center mt-8">
         <div className="mt-8 w-full max-w-[880px]">
           <h1 className="font-bold text-xl p-3">Veja mais cursos</h1>
           <Section 
