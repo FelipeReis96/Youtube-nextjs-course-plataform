@@ -19,7 +19,7 @@ export default function Header() {
     }, [currentPath]);
 
     return (
-        <div className="bg-[var(--color-header)] flex flex-row justify-between max-w-screen h-[8vh] items-center ">
+        <div className="bg-[var(--color-header)] flex flex-row justify-between max-w-screen h-[8vh] items-center fixed top-0 right-0 left-0">
             <button className="sm:hidden flex p-4"
             onClick={() => setDrawerOpen(!drawerOpen)}
             >

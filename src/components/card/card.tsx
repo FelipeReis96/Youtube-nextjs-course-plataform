@@ -14,7 +14,7 @@ export default function Card({href, imageSrc, title, description}: ICardProps) {
     return (
         <Link href={href}>
             <div className="p-2">
-                <div className="hover:bg-[var(--color-header)] p-2 rounded-lg flex flex-col justify-center items-center">
+                <div className="hover:bg-[var(--color-header)] p-2 rounded-lg flex flex-col justify-center items-center">  {/* aplica um hover quando passa o mouse no card*/}
                     <Image
                     src={imageSrc}
                     alt={description}
