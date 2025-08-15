@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { MdMenu } from 'react-icons/md';
 import { useState, useEffect } from 'react';
 
-import  ToggleTheme  from "@/components/toggle-theme-button";
+import  ToggleTheme  from "@/components/button/toggle-theme-button";
 import { usePathname} from 'next/navigation';
 
 export default function Header() {
@@ -19,7 +19,7 @@ export default function Header() {
     }, [currentPath]);
 
     return (
-        <div className="bg-[var(--color-header)] flex flex-row justify-between max-w-screen h-[8vh] items-center ">
+        <div className="bg-[var(--color-header)] flex flex-row justify-between max-w-screen h-[8vh] items-center fixed top-0 right-0 left-0">
             <button className="sm:hidden flex p-4"
             onClick={() => setDrawerOpen(!drawerOpen)}
             >
@@ -38,18 +38,18 @@ export default function Header() {
                         <li className="hidden sm:flex">
                             <Link href='https://www.skilledseducer.com/threads/going-out-alone.12004/'>My connections</Link>
                         </li>
-                        <h1 className="sm:hidden">
+                        <h1 className="sm:hidden font-bold">
                             {title}
                         </h1>
                     </ul>
 
-                    {drawerOpen && (
+                    {drawerOpen  && (
   <div
     className="fixed top-0 left-0 bottom-0 right-0 bg-gradient-to-r from-[var(--background)] sm:hidden"
     onClick={() => setDrawerOpen(false)} //Close the drawer when clicking outside
   >
     <ul
-      className="flex flex-col gap-4 p-4 w-60 bg-[var(--background)]"
+      className="flex flex-col gap-4 p-4 w-60 h-screen bg-[var(--background)]"
       onClick={(e) => e.stopPropagation()} // Prevent clicks inside the drawer from closing it
     >
       <h1 className="sm:hidden">{title}</h1>
