@@ -56,10 +56,10 @@ export default function ShareButton({ link }: IShareButtonProps) {
     useOutsideAlerter(wrapperRef);
 
     return (
-        <div className="relative">
+        <div className="">
             <button 
                 onClick={() => setIsOpen(!isOpen)}
-                className="flex items-center p-2 border rounded hover:bg-[var(--color-header)] bg-[var(--card-color)]"
+                className="flex items-center p-2 border rounded hover:bg-[var(--color-header)] bg-[var(--card-color)] "
             >
                 <MdShare className="mr-2" />
                 Share
@@ -67,7 +67,7 @@ export default function ShareButton({ link }: IShareButtonProps) {
             {isOpen && (
                 <div
                     ref={wrapperRef}
-                    className="absolute  mt-2  border rounded shadow-lg flex items-center flex-col p-1 bg-[var(--card-color)] z-10"
+                    className="mt-2 max-w-70 border rounded shadow-lg flex items-center flex-col p-1 bg-[var(--card-color)]"
                 >
                     <p className="mb-2 text-sm">Copy the link below:</p>
                     <div className="flex w-full gap-2 text-sm">
@@ -84,13 +84,13 @@ export default function ShareButton({ link }: IShareButtonProps) {
                                     ? 'bg-green-500 text-white border-green-500' 
                                     : 'bg-[var(--card-color)] hover:bg-[var(--color-header)]'
                             }`}
-                            title={copied ? "Link copiado!" : "Copiar link"}
+                            title={copied ? "Link is copied!" : "Copy link"}
                         >
                             {copied ? <MdCheck size={20} /> : <MdContentCopy size={20} />}
                         </button>
                     </div>
                     {copied && (
-                        <p className="mt-2 text-sm text-green-600">Link copiado com sucesso!</p>
+                        <p className="mt-2 text-sm text-green-600">Link is successfully copied!</p>
                     )}
                 </div>
             )}

@@ -25,7 +25,7 @@ export default function Header() {
             >
                 <MdMenu size={24} />
             </button>
-            <main className="flex justify-center flex-grow">
+            <main className="flex justify-center flex-grow " >
                 <nav> 
                     <ul className="flex flex-row gap-4 p-2 justify-between "> 
                         <li className="hidden sm:flex">
@@ -45,11 +45,11 @@ export default function Header() {
 
                     {drawerOpen  && (
   <div
-    className="fixed top-0 left-0 bottom-0 right-0 bg-gradient-to-r from-[var(--background)] sm:hidden"
+    className="fixed top-0 left-0 bottom-0 right-0 bg-gradient-to-r from-[var(--background)] sm:hidden z-[100]"
     onClick={() => setDrawerOpen(false)} //Close the drawer when clicking outside
   >
     <ul
-      className="flex flex-col gap-4 p-4 w-60 h-screen bg-[var(--background)]"
+      className="flex flex-col gap-4 p-4 w-60 h-screen bg-[var(--background)] z-[101]"
       onClick={(e) => e.stopPropagation()} // Prevent clicks inside the drawer from closing it
     >
       <h1 className="sm:hidden">{title}</h1>

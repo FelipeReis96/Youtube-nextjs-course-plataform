@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Inter } from 'next/font/google';
 
 
 interface ICardProps {   // Define the properties that the Card component will accept (every component that has props should have an interface)

@@ -37,7 +37,7 @@ export default function CollapsedText({children}: ICollapsedTextProps) {
         <div className="flex items-center justify-center flex-col">
             <p 
                 ref={textRef}
-                className={isCollapsed ? 'line-clamp-8' : ''}
+                className={isCollapsed ? 'line-clamp-7' : ''}
             >
                 {children}
             </p>
