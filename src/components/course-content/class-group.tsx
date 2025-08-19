@@ -3,22 +3,19 @@ import {MdKeyboardArrowRight, MdKeyboardArrowDown} from "react-icons/md";
 import { useState } from "react";
 
 import Class from "./class";
+import type { IClassProps } from "./class";
 
-interface IClassProps {
-    title: string;
-    url: string;
-}
 
-interface IClassGroupProps {
+export interface IClassGroupProps {
     groupTitle: string;
-    items: IClassProps[];
+    groupItems: IClassProps[];
 }
 
-export default function ClassGroup({groupTitle, items}: IClassGroupProps) {
+export default function ClassGroup({groupTitle, groupItems}: IClassGroupProps) {
     const [arrowRight, setArrowRight] = useState(true);
     
     return (
-        <div className="flex flex-col p-2 bg-[var(--card-color)] rounded-lg mt-4">
+        <div className="flex flex-col p-2 bg-[var(--card-color)]">
             <div className="flex flex-row">
                 <button onClick={() => setArrowRight(!arrowRight)}
                 className="">
@@ -32,7 +29,7 @@ export default function ClassGroup({groupTitle, items}: IClassGroupProps) {
             </div>
             {arrowRight ? null : (
                 <ul className="pt-3">
-                    {items.map((item,index)=>(
+                    {groupItems.map((item,index)=>(
                         <li key={index}>
                             <Class title={item.title} url={item.url} />
                         </li>

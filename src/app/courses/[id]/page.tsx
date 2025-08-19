@@ -5,6 +5,7 @@ import ShareButton from "@/components/button/share-button";
 import StartCoursePage from "@/components/start-course-page";
 import Class from "@/components/course-content/class";
 import ClassGroup from "@/components/course-content/class-group";
+import CourseContent from "@/components/course-content/courseContent";
 
 interface Props {
     params: { id : string}; // params é um objeto que contém os parâmetros da rota, no href: "/courses/ligma", "ligma" é o parâmetro id
@@ -21,7 +22,7 @@ export default function CourseDetailPage({params} : Props) {
     return (
         <main className="flex flex-col items-center justify-center pt-10 p-3">
             <div className="max-w-[880px] mt-8">
-                <StartCoursePage />
+                <StartCoursePage imageSrc={""} idClass={""} idCourse={params.id} />
                 <h1 className="font-bold text-xl p-3">Detalhes do Curso de {params.id}</h1>
                 <CollapsedText>Lorem Ipsum is simply dummy text of
                 the printing and typesetting industry. Lorem Ipsum has been the industry standard
@@ -70,14 +71,24 @@ export default function CourseDetailPage({params} : Props) {
                      link={`https://www.example.com/courses/${params.id}`} />
                 </div>
 
-            <ClassGroup 
-            groupTitle="Classes"
-            items={[
-                {title: "Class 1", url: "/courses/1/class-1"},
-                {title: "Class 2", url: "/courses/1/class-2"},
-                {title: "Class 3", url: "/courses/1/class-3"},
-                {title: "Class 4", url: "/courses/1/class-4"},
-            ]} />
+            <CourseContent 
+                itemsCourse={[
+                    {
+                        groupTitle: "Introduction",
+                        groupItems: [
+                            {title: "What is Next.js?", url: "/courses/1/class-1"},
+                            {title: "Getting Started", url: "/courses/1/class-2"},
+                        ]
+                    },
+                    {
+                        groupTitle: "Advanced Topics",
+                        groupItems: [
+                            {title: "API Routes", url: "/courses/1/class-3"},
+                            {title: "Middleware", url: "/courses/1/class-4"},
+                        ]
+                    }
+                ]}
+            />
             </div>
         </main>
     );
